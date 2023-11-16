@@ -49,13 +49,21 @@ public class Main {
 		animalsCanFly[1] = a;
 
 		for (int i = 0; i < animalsCanFly.length; i++) {
-			IVolante.faiVolare(animalsCanFly[i]);
+			faiVolare(animalsCanFly[i]);
 		}
 
 		INuotante[] animalsCanSwim = new INuotante[1];
 
 		animalsCanSwim[0] = d;
 
-		INuotante.faiNuotare(d);
+		faiNuotare(d);
+	}
+	
+	static void faiNuotare(INuotante animal) {
+		animal.nuota();
+	}
+	
+	static void faiVolare(IVolante animal) {
+		animal.vola();
 	}
 }
